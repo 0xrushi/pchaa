@@ -1,7 +1,7 @@
 # Power Search and Autocomplete
 
 
-# Why PCS?
+# Why PCH?
 - FOSS
 - Not Electron based
 - Works with your existing terminal & shell
