@@ -4,7 +4,6 @@ from os.path import join, expanduser
 import subprocess
 from xdo import Xdo
 
-xdo = Xdo()
 
 def checkhistory():
     # return bash history in long text
@@ -13,16 +12,12 @@ def checkhistory():
 
 def copy2clip(txt):
     # Copies text to clipboard
-    cmd='echo '+txt.strip()+'| xclip -sel c'
+    cmd='echo "'+txt.strip()+'" | xclip -sel c'
     return subprocess.check_call(cmd, shell=True)
 
-def sendkeys(*keys):
+def sendkeys(xdo, *keys):
     # send keystrokes for xdo
     for k in keys: xdo.send_keysequence_window(0, k.encode())
-
-data_list = checkhistory().split('\n')
-
-data_list = list(zip(data_list, [ str(i) for i in range(len(data_list))]))
 
 class MyCustomCompleter(Completer):
     def __init__(self, data_list):
@@ -36,10 +31,15 @@ class MyCustomCompleter(Completer):
                 start_position=-len(document.text_before_cursor), 
                 display = m, display_meta = self.data_dict[m])
         
-mycompleter = MyCustomCompleter(data_list)
 
-if __name__ == '__main__':
+def main():
+    xdo = Xdo()
+    
+    data_list = checkhistory().split('\n')
+    data_list = list(zip(data_list, [ str(i) for i in range(len(data_list))]))
+
+    mycompleter = MyCustomCompleter(data_list)
     answer = prompt('>', completer = mycompleter)
     print('ID: %s' % answer)
     copy2clip(answer)
-    sendkeys('ctrl+Shift+v')
+    sendkeys(xdo, 'ctrl+Shift+v')
