@@ -1,7 +1,7 @@
 # Power Search and Autocomplete
 
 
-# Why PCH?
+# Why PCHAA?
 - FOSS
 - Not Electron based
 - Works with your existing terminal & shell
@@ -9,7 +9,7 @@
 
 # Demo
 
-![pch](https://user-images.githubusercontent.com/6279035/177213296-1e8af323-fd62-4f1b-a8c5-89e2e99d6701.gif)
+![pchaa](https://user-images.githubusercontent.com/6279035/177213296-1e8af323-fd62-4f1b-a8c5-89e2e99d6701.gif)
 
 # Project Goals
 
