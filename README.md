@@ -16,6 +16,14 @@
 
 The goal of the project is to create a beautiful experience for Terminals users. All of the alternative versions for such projects were ElectronJS based, I needed something minimal with easy to update custom search algorithms
 
+### Similar projects
+
+- https://fig.io/
+- https://www.warp.dev/
+- https://www.hyper.is
+- https://github.com/mflorence99/el-term
+
+
 **Install**
 ```
 pip install python-libxdo prompt_toolkit 
