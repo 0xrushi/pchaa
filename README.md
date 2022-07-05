@@ -18,6 +18,9 @@ The goal of the project is to create a beautiful experience for Terminals users.
 
 **Install**
 ```
+# Install xdotool, for arch linux its
+sudo pacman -S xdotool
+
 pip install python-libxdo prompt_toolkit 
 pip install pchaa
 ```
@@ -39,3 +42,8 @@ Clean and filter the bash history and integrate Naive Bayes algorithm for next c
 - https://www.warp.dev/
 - https://www.hyper.is
 - https://github.com/mflorence99/el-term
+
+
+# FAQs
+## My auto complete window is empty
+pchaa uses ~/.bash_history to get previously used bash history. Make sure your terminal has some history to be displayed.
