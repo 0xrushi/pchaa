@@ -50,3 +50,7 @@ pchaa uses ~/.bash_history to get previously used bash history. Make sure your t
 
 ## Does pchaa work in tty?
 pchaa uses xclip which needs X running. pchaa won't work in wayland/ tty as of now.
+
+## Wayland and MacOS fix
+- wtype, wl-clipboard, wclip, ydotool
+- pbcopy and pbpaste, If anyone wan'ts this to port to MacOs feel free to file an issue, I need a user to test.
