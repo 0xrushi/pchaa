@@ -47,3 +47,6 @@ Clean and filter the bash history and integrate Naive Bayes algorithm for next c
 # FAQs
 ## My auto complete window is empty
 pchaa uses ~/.bash_history to get previously used bash history. Make sure your terminal has some history to be displayed.
+
+## Does pchaa work in tty?
+pchaa uses xclip which needs X running. pchaa won't work in wayland/ tty as of now.
